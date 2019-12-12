@@ -6,4 +6,8 @@ router.get("/count", function(req, res, next) {
   res.json(topicsService.getTopicsCount());
 });
 
+router.get("/bannedCount", function(req, res, next) {
+  res.json(topicsService.getTopicsBannedCount());
+});
+
 module.exports = router;
