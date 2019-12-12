@@ -2,7 +2,13 @@ var data = require("../data.json");
 
 var service = {};
 
-/* GET users listing. */
+service.getTopics = function() {
+  var allTopics = data.reduce((array, element) => {
+    return array.concat(element.topics);
+  }, []);
+  return allTopics;
+};
+
 service.getTopicsCount = function() {
   var allTopics = data
     .reduce((array, element) => {
