@@ -6,4 +6,8 @@ router.get("/filteredCount", function(req, res, next) {
   res.json(textsService.getFilteredCount());
 });
 
+router.get("/countByPlayer", function(req, res, next) {
+  res.json(textsService.getCountByPlayer());
+});
+
 module.exports = router;
